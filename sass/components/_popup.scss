@@ -65,7 +65,7 @@
 @media (max-width: 30em) {
   .popup {
     background-size: start;
-    background-position-y: 30%;
+    background-position-y: 100%;
   }
 }
 
@@ -104,6 +104,7 @@
   align-items: stretch;
   justify-content: start;
   gap: 2rem;
+  margin: 1.6rem;
   padding: 3.12rem;
   position: relative;
   width: 50rem;

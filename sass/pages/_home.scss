@@ -191,7 +191,7 @@
     background-position: 50%;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 390rem;
+    height: 310rem;
   }
 
   &__titulo {
@@ -269,10 +269,18 @@
 
   &__box2 {
     align-self: end;
+
+    @include respond(small) {
+      width: 100%;
+    }
   }
 
   &__box4 {
     align-self: end;
+
+    @include respond(small) {
+      width: 100%;
+    }
   }
 
   &__resultados {
@@ -313,9 +321,14 @@
   }
 
   &__conteudo {
-    @include flex($justify: center, $gap: 1.6rem);
-    width: 120rem;
+    @include flex($gap: 1.6rem);
+    height: 40rem;
+    width: 100rem;
+    overflow: hidden;
     position: relative;
+
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
 
     @include respond(big) {
       width: 100rem;
@@ -328,31 +341,39 @@
 
     @include respond(medium) {
       width: 69.5rem;
+      min-height: 45rem;
     }
 
     @include respond(small) {
-      @include flex($direction: column);
       width: 32rem;
-      height: auto;
+      padding: 0 1.6rem;
     }
 
     &--itens {
       @include flex($direction: column, $gap: 1.6rem);
+      display: none;
       padding: 2.6rem;
-      width: 33.33%;
-      height: 41rem;
+      max-width: 48.4rem;
+      min-height: 41rem;
+
       border-radius: 2.5rem 2.5rem 0 0;
       background-image: url(../img/RETANGULO-SESSAO-DEPOIMENTOS-WEBP.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+
+      &.active {
+        display: flex;
+      }
 
       @include respond(small) {
-        width: 100%;
+        min-width: 29rem;
       }
     }
 
     &--cliente {
-      border-radius: 50%;
-
       & img {
+        border-radius: 50%;
         width: 10rem;
         height: 10rem;
       }
@@ -376,20 +397,24 @@
     }
 
     &--seta.direita {
-      left: 100%;
+      left: 94.5%;
       transform: translateX(0%);
       background-image: url(../img/seta-direita.svg);
       background-position: 50%;
       background-repeat: no-repeat;
       background-size: contain;
 
+      @include respond(medium) {
+        left: 94.6%;
+      }
+
       @include respond(small) {
-        display: none;
+        left: 89%;
       }
     }
 
     &--seta.esquerda {
-      left: 0%;
+      left: 5.3%;
       transform: translateX(-100%);
       background-image: url(../img/seta-esquerda.svg);
       background-position: 50%;
@@ -397,7 +422,7 @@
       background-size: contain;
 
       @include respond(small) {
-        display: none;
+        left: 11%;
       }
     }
   }
@@ -828,7 +853,6 @@
         @include flex($gap: 0.6rem, $align: center);
 
         @include respond(medium) {
-          gap: 0.1rem;
           font-size: 1.4rem;
         }
 
@@ -868,7 +892,6 @@
 
       @include respond(bigmedium) {
         width: 100%;
-        align-items: center;
         margin: 0;
       }
 
@@ -911,7 +934,6 @@
         @include flex($gap: 0.6rem, $align: center);
 
         @include respond(bigmedium) {
-          gap: 0.1rem;
           font-size: 1.5rem;
         }
 
@@ -1189,7 +1211,7 @@
 }
 
 .exclusivas {
-  height: auto;
+  height: 120rem;
   background-image: url(../img/BG-OFERTA-WEBP-VERMELHO.webp);
   background-repeat: no-repeat;
   background-position: 50%;
@@ -1200,11 +1222,11 @@
   }
 
   &__container {
-    @include flex($direction: column, $gap: 1.7rem);
+    @include flex($direction: column, $align: center, $gap: 1.7rem);
     text-align: center;
 
     @include respond(big) {
-      @include flex($align: center, $direction: column);
+      @include flex($align: center, $direction: column, $gap: 1.6rem);
     }
 
     @include respond(medium) {
@@ -1229,6 +1251,8 @@
   }
 
   &__paragrafo {
+    font-size: 4.2rem;
+
     @include respond(small) {
       font-size: 2.4rem;
     }
@@ -1240,7 +1264,7 @@
 
   &__conteudo {
     @include flex($gap: 1.6rem);
-    width: 128rem;
+    width: 120rem;
     margin: 0 2rem;
     height: auto;
 
@@ -1272,7 +1296,7 @@
       color: $cor-branca;
 
       @include respond(bigmedium) {
-        padding: 1;
+        padding: 1.4rem;
         margin: 0;
       }
 
@@ -1311,14 +1335,11 @@
       & .compra__segura {
         @include flex($gap: 0.6rem, $align: center);
 
-        @include respond(medium) {
-          font-size: 1.3rem;
-        }
-
         &.icone {
+          margin-bottom: 3px;
           width: 1.5rem;
           height: 1.5rem;
-          background-image: url(../../img/ICONE-LUCKICONE-CADEADO-vermelho.svg);
+          background-image: url(../img/ICONE-LUCKICONE-CADEADO-vermelho.svg);
           background-position: 50%;
           background-repeat: no-repeat;
           background-size: cover;
@@ -1336,7 +1357,7 @@
       color: $cor-preta;
 
       @include respond(bigmedium) {
-        padding: 1;
+        padding: 1.3rem;
         margin: 0;
       }
 
@@ -1385,7 +1406,7 @@
         @include flex($gap: 0.6rem, $align: center);
 
         @include respond(bigmedium) {
-          @include flex($gap: 0.1rem);
+          @include flex($gap: 0.6rem, $align: center);
         }
 
         @include respond(medium) {
@@ -1395,7 +1416,7 @@
         &.icone {
           width: 1.5rem;
           height: 1.5rem;
-          background-image: url(../../img/ICONE-LUCK-ICONE-CADEADO-AMARELO.svg);
+          background-image: url(../img/ICONE-LUCK-ICONE-CADEADO-AMARELO.svg);
           background-position: 50%;
           background-repeat: no-repeat;
           background-size: cover;
@@ -1427,7 +1448,7 @@
       color: $cor-branca;
 
       @include respond(bigmedium) {
-        padding: 1;
+        padding: 1.4rem;
         margin: 0;
       }
 
@@ -1472,7 +1493,7 @@
         @include flex($gap: 0.6rem, $align: center);
 
         @include respond(bigmedium) {
-          @include flex($gap: 0.1rem);
+          @include flex($gap: 0.6rem, $align: center);
         }
 
         @include respond(medium) {
@@ -1482,7 +1503,7 @@
         &.icone {
           width: 1.5rem;
           height: 1.5rem;
-          background-image: url(../../img/ICONE-LUCKICONE-CADEADO-vermelho.svg);
+          background-image: url(../img/ICONE-LUCKICONE-CADEADO-vermelho.svg);
           background-position: 50%;
           background-repeat: no-repeat;
           background-size: cover;
@@ -1503,16 +1524,8 @@
 
 .faq {
   @include flex($direction: column, $align: center);
-  height: 65rem;
   background-color: #390303;
-
-  @include respond(bigmedium) {
-    margin-top: -1rem;
-  }
-
-  @include respond(small) {
-    height: auto;
-  }
+  margin-top: -1px;
 
   &__container {
     margin: 0;
