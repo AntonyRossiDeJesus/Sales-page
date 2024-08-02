@@ -1526,6 +1526,7 @@
   @include flex($direction: column, $align: center);
   background-color: #390303;
   margin-top: -1px;
+  height: 100rem;
 
   &__container {
     margin: 0;

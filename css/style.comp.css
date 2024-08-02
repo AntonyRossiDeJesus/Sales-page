@@ -2351,6 +2351,7 @@ strong {
   gap: 0;
   background-color: #390303;
   margin-top: -1px;
+  height: 100rem;
 }
 .faq__container {
   margin: 0;
