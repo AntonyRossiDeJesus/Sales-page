@@ -1563,21 +1563,34 @@
   }
 
   .item-acordeao {
-    border-radius: 3.5rem;
-    background-color: white;
-    box-shadow: 0 0 0.6rem 0 rgba(0, 0, 0, 0.2);
     margin: 1.2rem 0;
     cursor: pointer;
   }
 
   .cabecalho-item {
-    display: flex;
-    justify-content: space-between;
-
+    @include flex($justify: space-between, $align: center);
+    color: white;
     font-weight: 700;
     font-size: 1.8rem;
+    height: 9.6rem;
     padding: 2.4rem 3.2rem;
-    border-radius: 3.5rem;
+    background: linear-gradient(to right, #db3434, #39030300);
+
+    & .img-seta {
+      text-align: center;
+      max-width: 16px;
+      max-height: 16px;
+    }
+  }
+
+  .cabecalho-item--reverse {
+    @include flex($justify: space-between, $align: center);
+    color: white;
+    font-weight: 700;
+    font-size: 1.8rem;
+    height: 9.6rem;
+    padding: 2.4rem 3.2rem;
+    background: linear-gradient(to left, #db3434, #39030300);
 
     & .img-seta {
       text-align: center;
@@ -1587,15 +1600,19 @@
   }
 
   .aberto .cabecalho-item {
-    background-color: $cor-vermelho-claro;
-    color: white;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    background: linear-gradient(to right, #db3434, #39030300);
+    color: black;
+  }
+
+  .aberto .cabecalho-item--reverse {
+    background: linear-gradient(to left, #db3434, #39030300);
+    color: black;
   }
 
   .cabecalho-item::after {
     content: "\2bc6";
     display: none;
+    color: white;
   }
 
   .aberto .cabecalho-item::after {
@@ -1606,11 +1623,15 @@
   .corpo-item {
     display: none;
     padding: 2.4rem 3.2rem;
+    color: white;
+    background: linear-gradient(to right, #db3434, #39030300);
+  }
 
-    background-color: rgb(255, 240, 221);
-
-    border-bottom-left-radius: 3.5rem;
-    border-bottom-right-radius: 3.5rem;
+  .corpo-item--reverse {
+    display: none;
+    padding: 2.4rem 3.2rem;
+    color: white;
+    background: linear-gradient(to left, #db3434, #39030300) !important;
   }
 
   .aberto .corpo-item {

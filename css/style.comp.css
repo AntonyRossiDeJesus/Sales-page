@@ -2392,34 +2392,57 @@ strong {
   }
 }
 .faq .item-acordeao {
-  border-radius: 3.5rem;
-  background-color: white;
-  box-shadow: 0 0 0.6rem 0 rgba(0, 0, 0, 0.2);
   margin: 1.2rem 0;
   cursor: pointer;
 }
 .faq .cabecalho-item {
   display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
   justify-content: space-between;
+  gap: 0;
+  color: white;
   font-weight: 700;
   font-size: 1.8rem;
+  height: 9.6rem;
   padding: 2.4rem 3.2rem;
-  border-radius: 3.5rem;
+  background: linear-gradient(to right, #db3434, rgba(57, 3, 3, 0));
 }
 .faq .cabecalho-item .img-seta {
   text-align: center;
   max-width: 16px;
   max-height: 16px;
 }
-.faq .aberto .cabecalho-item {
-  background-color: #db3434;
+.faq .cabecalho-item--reverse {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
   color: white;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+  height: 9.6rem;
+  padding: 2.4rem 3.2rem;
+  background: linear-gradient(to left, #db3434, rgba(57, 3, 3, 0));
+}
+.faq .cabecalho-item--reverse .img-seta {
+  text-align: center;
+  max-width: 16px;
+  max-height: 16px;
+}
+.faq .aberto .cabecalho-item {
+  background: linear-gradient(to right, #db3434, rgba(57, 3, 3, 0));
+  color: black;
+}
+.faq .aberto .cabecalho-item--reverse {
+  background: linear-gradient(to left, #db3434, rgba(57, 3, 3, 0));
+  color: black;
 }
 .faq .cabecalho-item::after {
   content: "⯆";
   display: none;
+  color: white;
 }
 .faq .aberto .cabecalho-item::after {
   content: "⯅";
@@ -2428,9 +2451,14 @@ strong {
 .faq .corpo-item {
   display: none;
   padding: 2.4rem 3.2rem;
-  background-color: rgb(255, 240, 221);
-  border-bottom-left-radius: 3.5rem;
-  border-bottom-right-radius: 3.5rem;
+  color: white;
+  background: linear-gradient(to right, #db3434, rgba(57, 3, 3, 0));
+}
+.faq .corpo-item--reverse {
+  display: none;
+  padding: 2.4rem 3.2rem;
+  color: white;
+  background: linear-gradient(to left, #db3434, rgba(57, 3, 3, 0)) !important;
 }
 .faq .aberto .corpo-item {
   display: block;
