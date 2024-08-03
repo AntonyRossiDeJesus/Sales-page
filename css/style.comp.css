@@ -331,7 +331,7 @@ strong {
 @media (max-width: 47.8em) {
   .popup {
     background-size: start;
-    background-position-y: 80%;
+    background-position-y: 50%;
   }
 }
 .popup__fechar {
