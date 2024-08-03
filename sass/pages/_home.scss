@@ -1595,10 +1595,12 @@
 
   .cabecalho-item::after {
     content: "\2bc6";
+    display: none;
   }
 
   .aberto .cabecalho-item::after {
     content: "\2bc5";
+    display: none;
   }
 
   .corpo-item {

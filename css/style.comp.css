@@ -2406,6 +2406,11 @@ strong {
   padding: 2.4rem 3.2rem;
   border-radius: 3.5rem;
 }
+.faq .cabecalho-item .img-seta {
+  text-align: center;
+  max-width: 16px;
+  max-height: 16px;
+}
 .faq .aberto .cabecalho-item {
   background-color: #db3434;
   color: white;
@@ -2414,9 +2419,11 @@ strong {
 }
 .faq .cabecalho-item::after {
   content: "⯆";
+  display: none;
 }
 .faq .aberto .cabecalho-item::after {
   content: "⯅";
+  display: none;
 }
 .faq .corpo-item {
   display: none;
