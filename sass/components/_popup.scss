@@ -111,4 +111,8 @@
   background-color: #fff;
   border-radius: 2.5rem;
   box-shadow: inset 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.8);
+
+  @include respond(big) {
+    height: auto;
+  }
 }
