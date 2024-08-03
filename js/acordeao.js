@@ -35,15 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
         el.classList.remove("aberto");
         const elImgSeta = el.querySelector(".img-seta");
         if (elImgSeta) {
-          elImgSeta.src = "img/seta-para-baixo.png";
+          elImgSeta.src = "/img/seta-para-baixo.png";
         }
       });
 
       if (!isOpen) {
         item.classList.add("aberto");
-        imgSeta.src = "img/seta-para-cima.png";
+        imgSeta.src = "/img/seta-para-cima.png";
       } else {
-        imgSeta.src = "img/seta-para-baixo.png";
+        imgSeta.src = "/img/seta-para-baixo.png";
       }
     });
   });
