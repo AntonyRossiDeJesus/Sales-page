@@ -328,10 +328,10 @@ strong {
   font-weight: 700;
 }
 
-@media (max-width: 30em) {
+@media (max-width: 47.8em) {
   .popup {
     background-size: start;
-    background-position-y: 100%;
+    background-position-y: 80%;
   }
 }
 .popup__fechar {
@@ -2406,6 +2406,7 @@ strong {
   border-radius: 3.5rem;
 }
 .faq .cabecalho-item .img-seta {
+  text-align: center;
   max-width: 16px;
   max-height: 16px;
 }
