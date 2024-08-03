@@ -1579,11 +1579,11 @@
     padding: 2.4rem 3.2rem;
     border-radius: 3.5rem;
 
-    & .img-seta {
-      text-align: center;
-      max-width: 16px;
-      max-height: 16px;
-    }
+    // & .img-seta {
+    //   text-align: center;
+    //   max-width: 16px;
+    //   max-height: 16px;
+    // }
   }
 
   .aberto .cabecalho-item {
@@ -1591,6 +1591,14 @@
     color: white;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+  }
+
+  .cabecalho-item::after {
+    content: "\2bc6";
+  }
+
+  .aberto .cabecalho-item::after {
+    content: "\2bc5";
   }
 
   .corpo-item {
