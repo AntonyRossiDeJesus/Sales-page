@@ -1587,11 +1587,18 @@
   }
 
   .cabecalho-item::after {
-    content: "\2bc6";
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/seta-para-baixo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .aberto .cabecalho-item::after {
-    content: "\2bc5";
+    background-image: url(../img/seta-para-cima.png);
   }
 
   .corpo-item {

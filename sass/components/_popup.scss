@@ -87,6 +87,10 @@
   border: 2px solid #fff;
   font-weight: 700;
   font-size: 1.92rem;
+
+  & img {
+    width: 1.8rem;
+  }
 }
 .popup__fechar:hover {
   border-width: 1px;
