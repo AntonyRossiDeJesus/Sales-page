@@ -1579,8 +1579,8 @@
     border-radius: 3.5rem;
 
     & .img-seta {
-      width: 16px;
-      height: 16px;
+      max-width: 16px;
+      max-height: 16px;
     }
   }
 
@@ -1589,26 +1589,7 @@
     color: white;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-
-    // & img {
-    //   background-image: url(../../public/seta-para-cima.png);
-    // }
   }
-
-  // .cabecalho-item::after {
-  //   content: "";
-  //   display: inline-block;
-  //   width: 16px;
-  //   height: 16px;
-  //   background-image: url(../../public/seta-para-baixo.png);
-  //   background-size: contain;
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  // }
-
-  // .aberto .cabecalho-item::after {
-  //   background-image: url("https://drive.google.com/uc?id=1RHJBXS1gt8P6b96IDl5pNK0Bo5G7Fs2h");
-  // }
 
   .corpo-item {
     display: none;

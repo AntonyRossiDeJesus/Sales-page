@@ -2405,24 +2405,15 @@ strong {
   padding: 2.4rem 3.2rem;
   border-radius: 3.5rem;
 }
+.faq .cabecalho-item .img-seta {
+  max-width: 16px;
+  max-height: 16px;
+}
 .faq .aberto .cabecalho-item {
   background-color: #db3434;
   color: white;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-}
-.faq .cabecalho-item::after {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-image: url(../img/seta-para-baixo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.faq .aberto .cabecalho-item::after {
-  background-image: url(./img/seta-para-cima.png);
 }
 .faq .corpo-item {
   display: none;
