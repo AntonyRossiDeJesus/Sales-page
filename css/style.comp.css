@@ -2422,7 +2422,7 @@ strong {
   background-position: center;
 }
 .faq .aberto .cabecalho-item::after {
-  background-image: url(../img/seta-para-cima.png);
+  background-image: url(./img/seta-para-cima.png);
 }
 .faq .corpo-item {
   display: none;
